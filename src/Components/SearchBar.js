@@ -1,11 +1,18 @@
+import { useState } from 'react'
 import '../Styles/SearchBar.css'
-export default function SearchBar() {
+
+export default function SearchBar({ search, setSearch }) {
     return (
         <div className="search-bar">
             <h1>We tackle interseting topics everyday</h1>
             <div className='container'>
                 <div className='search-box'>
-                    <input type="text" placeholder="Search" />
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        onChange={e => setSearch(e.target.value)}
+                        value={search}
+                    />
                 </div>
                 <div className='layouts'>
                     <div className='layout'>

@@ -3,7 +3,7 @@ import TagFilter from './TagFilter'
 import { data } from '../Data/ArticleData'
 import "../Styles/Articles.css"
 
-export default function Articles({ search, tag, setTag }) {
+export default function Articles({ search, tag, setTag, layout }) {
     return (
         <div>
             <TagFilter tag={tag} setTag={setTag} />
@@ -36,6 +36,7 @@ export default function Articles({ search, tag, setTag }) {
                                     image={article.image}
                                     category={article.category}
                                     date={article.date}
+                                    layout={layout}
                                 />
                             )
                         }) || <h1>No results found</h1>

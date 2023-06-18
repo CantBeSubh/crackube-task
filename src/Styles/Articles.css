@@ -9,12 +9,11 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
-    /* Wrap after 4 elements in a row */
     flex-wrap: wrap;
 
 }
 
-.article {
+.articleGrid {
     display: flex;
     flex-direction: column;
     width: 24%;
@@ -25,15 +24,30 @@
     background-color: rgb(29, 31, 37);
     color: #fff;
     cursor: pointer;
-
 }
 
+.articleList {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: rgb(29, 31, 37);
+    color: #fff;
+    cursor: pointer;
+}
 
-.thumbnail img {
+.imgGrid {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;
+}
+
+.imgList {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0px 0px 10px;
 }
 
 .information {

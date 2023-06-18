@@ -1,10 +1,10 @@
 import moment from "moment/moment";
 
-export default function Article({ title, description, image, category, date }) {
+export default function Article({ title, description, image, category, date, layout }) {
     return (
-        <div className="article">
+        <div className={layout === 'Grid' ? 'articleGrid' : 'articleList'}>
             <div className="thumbnail">
-                <img src={image} alt="thumbnail" />
+                <img src={image} alt="thumbnail" className={layout === 'Grid' ? 'imgGrid' : 'imgList'} />
             </div>
             <div className="information">
                 <div className="meta">

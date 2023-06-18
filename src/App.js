@@ -1,9 +1,13 @@
+import Articles from "./Components/Articles";
+import Navbar from "./Components/Navbar";
+import SearchBar from "./Components/SearchBar";
+
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">
-        Goodbye,world!
-      </h1>
+      <Navbar />
+      <SearchBar />
+      <Articles />
     </div>
   );
 }

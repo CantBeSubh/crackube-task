@@ -24,4 +24,5 @@
 .active {
     color: black;
     background-color: rgb(255, 187, 41);
+    box-shadow: 0 0 10px rgb(255, 187, 41);
 }

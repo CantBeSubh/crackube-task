@@ -24,6 +24,7 @@
     background-color: rgb(29, 31, 37);
     color: #fff;
     cursor: pointer;
+    transition: all .3s ease-in-out;
 }
 
 .articleList {
@@ -34,6 +35,12 @@
     background-color: rgb(29, 31, 37);
     color: #fff;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.articleGrid:hover,
+.articleList:hover {
+    box-shadow: 0 0 10px rgb(255, 187, 41);
 }
 
 .imgGrid {

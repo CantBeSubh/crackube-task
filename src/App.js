@@ -5,11 +5,13 @@ import SearchBar from "./Components/SearchBar";
 
 function App() {
   const [search, setSearch] = useState('')
+  const [tag, setTag] = useState('')
+  console.log(search, tag)
   return (
     <div className="App">
       <Navbar />
       <SearchBar search={search} setSearch={setSearch} />
-      <Articles search={search} />
+      <Articles search={search} tag={tag} setTag={setTag} />
     </div>
   );
 }

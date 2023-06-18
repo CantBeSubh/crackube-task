@@ -1,16 +1,20 @@
 import Tag from './Tag'
+import { data } from '../Data/TagData'
 import '../Styles/TagFilter.css'
 
-export default function TagFilter() {
+export default function TagFilter({ tag, setTag }) {
     return (
         <div className="tags">
-            <Tag name="All" />
-            <Tag name="Technology" />
-            <Tag name="Education" />
-            <Tag name="Lifestyle" />
-            <Tag name="Healthcare" />
-            <Tag name="Sport" />
-            <Tag name="Food" />
+            {data.map((item, index) => {
+                return (
+                    <Tag
+                        key={index}
+                        name={item}
+                        setTag={setTag}
+                        active={tag === item ? true : false}
+                    />
+                )
+            })}
         </div>
     )
 }

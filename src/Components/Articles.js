@@ -1,26 +1,32 @@
 import Article from './Article'
 import TagFilter from './TagFilter'
-import { data } from '../ArticleData'
+import { data } from '../Data/ArticleData'
 import "../Styles/Articles.css"
+import { useState } from 'react'
 
 
 
-export default function Articles({ search }) {
+export default function Articles({ search, tag, setTag }) {
     return (
         <div>
-            <TagFilter />
+            <TagFilter tag={tag} setTag={setTag} />
             <div className='articles'>
                 <div className='articles-row'>
                     {data
                         .filter((article) => {
-                            search = search.toLowerCase()
+                            if (tag === 'All') {
+                                return article
+                            } else if (article.category === tag) {
+                                return article
+                            }
+                        })
+                        .filter((article) => {
                             if (search === '') {
                                 return article
-                            } else if (article.title.toLowerCase().includes(search)) {
+                            } else if (article.title.toLowerCase().includes(search.toLowerCase())) {
                                 return article
-                            } else if (article.description.toLowerCase().includes(search)) {
-                                return article
-                            } else if (article.category.toLowerCase().includes(search)) {
+                            }
+                            else if (article.description.toLowerCase().includes(search.toLowerCase())) {
                                 return article
                             }
                         })

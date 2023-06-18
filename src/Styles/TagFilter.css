@@ -18,6 +18,9 @@
 
 .tag:first-child {
     margin-left: 0;
-    background-color: yellow;
+}
+
+.active {
     color: black;
+    background-color: yellow;
 }

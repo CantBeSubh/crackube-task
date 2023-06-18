@@ -7,6 +7,8 @@ export default function Articles() {
             <TagFilter />
             <Article />
             <Article />
+            <Article />
+            <Article />
         </div>
     )
 }

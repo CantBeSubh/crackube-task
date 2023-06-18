@@ -2,9 +2,6 @@ import Article from './Article'
 import TagFilter from './TagFilter'
 import { data } from '../Data/ArticleData'
 import "../Styles/Articles.css"
-import { useState } from 'react'
-
-
 
 export default function Articles({ search, tag, setTag }) {
     return (
@@ -38,6 +35,7 @@ export default function Articles({ search, tag, setTag }) {
                                     description={article.description}
                                     image={article.image}
                                     category={article.category}
+                                    date={article.date}
                                 />
                             )
                         }) || <h1>No results found</h1>

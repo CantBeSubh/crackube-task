@@ -5,8 +5,7 @@ import SearchBar from "./Components/SearchBar";
 
 function App() {
   const [search, setSearch] = useState('')
-  const [tag, setTag] = useState('')
-  console.log(search, tag)
+  const [tag, setTag] = useState('All')
   return (
     <div className="App">
       <Navbar />

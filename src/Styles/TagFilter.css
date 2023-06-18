@@ -1,6 +1,7 @@
 .tags {
     display: flex;
-    padding: 1rem 2rem;
+    padding: 2rem;
+    background-color: rgb(20, 21, 24);
 }
 
 .tag {
@@ -10,8 +11,8 @@
     height: 40px;
     border-radius: 30px;
     margin: 0 1rem;
-    background-color: #282c38;
-    color: #fff;
+    background-color: rgb(29, 31, 37);
+    color: #a5a5a5;
     padding: 1rem;
     cursor: pointer;
 }
@@ -22,5 +23,5 @@
 
 .active {
     color: black;
-    background-color: yellow;
+    background-color: rgb(255, 187, 41);
 }

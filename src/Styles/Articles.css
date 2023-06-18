@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem;
+    background-color: rgb(20, 21, 24);
 }
 
 .articles-row {
@@ -21,7 +22,7 @@
     margin-bottom: 20px;
     /* padding: 1rem; */
     border-radius: 10px;
-    background-color: #282c38;
+    background-color: rgb(29, 31, 37);
     color: #fff;
     cursor: pointer;
 
@@ -55,11 +56,25 @@
 }
 
 .read-more {
-    font-size: 1.2rem;
+    margin-top: 10px;
+    font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
     align-self: flex-start;
     background-color: transparent;
-    color: yellow;
+    color: rgb(255, 187, 41);
     border: none;
+}
+
+.read-more svg {
+    width: 1rem;
+    height: 1rem;
+    transform: translateY(3px);
+
+}
+
+.category {
+    text-transform: uppercase;
+    color: rgb(255, 187, 41);
+    letter-spacing: 8px;
 }

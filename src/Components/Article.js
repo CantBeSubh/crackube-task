@@ -1,3 +1,5 @@
+import moment from "moment/moment";
+
 export default function Article({ title, description, image, category, date }) {
     return (
         <div className="article">
@@ -7,7 +9,9 @@ export default function Article({ title, description, image, category, date }) {
             <div className="information">
                 <div className="meta">
                     <div className="category">{category}</div>
-                    <div className="date">{date}</div>
+                    <div className="date">
+                        {moment.unix(date / 1000).fromNow()}
+                    </div>
                 </div>
                 <div className="title">{title}</div>
                 <div className="description">{description}</div>
